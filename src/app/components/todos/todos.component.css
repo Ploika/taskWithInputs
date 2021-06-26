@@ -1,0 +1,32 @@
+.wrapper{
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+  width: 800px;
+  margin-left: 320px;
+  margin-top: 70px;
+}
+.title{
+  display: flex;
+  margin-bottom: 15px;
+}
+.left_title{
+  flex-grow: 1;
+}
+.right_title{
+
+  text-align: right;
+  flex-grow: 3;
+}
+.right_title > button {
+  background: linear-gradient(90deg, #38EE7E 0%, #1FA49B 100%);
+  box-shadow: 0px 4px 14px rgba(44, 203, 139, 0.3);
+  border-radius: 6px;
+  width: 137px;
+  height: 32px;
+  color: white;
+  margin-top: 20px;
+}
+.vector{
+  margin-left: 20px;
+}

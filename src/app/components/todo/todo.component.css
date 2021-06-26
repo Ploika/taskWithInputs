@@ -1,0 +1,36 @@
+.todo{
+  background: #FFFFFF;
+  border: 1px solid #E1E1E1;
+  box-sizing: border-box;
+  border-radius: 16px;
+  height: 70px;
+  text-align: left;
+  display: flex;
+  margin-bottom: 30px;
+}
+.square{
+  flex-grow: 1;
+  margin-top: 24px;
+  margin-left: 30px;
+}
+.todo_title{
+  flex-grow: 3;
+  text-align: left;
+}
+.todo_title > p {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 28px;
+}
+.edit{
+  flex-grow: 1;
+  text-align: right;
+  margin-top: 25px;
+}
+.remove{
+  text-align: right;
+  margin-right: 30px;
+  margin-top: 25px;
+  margin-left: 20px;
+
+}

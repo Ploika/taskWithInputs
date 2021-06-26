@@ -1,0 +1,55 @@
+<div class="main">
+  <h2>Create Account</h2>
+  <p> Let's get productive together!</p>
+    <form [formGroup]="myForm" (ngSubmit)="save()">
+      <div class="firth">
+        <label>Full Name *</label>
+        <br>
+        <input type="text" formControlName="name">
+      </div>
+      <div class="second">
+        <label>UserName *</label>
+        <br>
+        <input type="text" formControlName="username">
+      </div>
+      <div class="third">
+        <label>Email *</label>
+        <br>
+        <input type="email" [formControl]="email">
+        <div *ngIf="!email.valid">
+          <p class='validation'>Please enter a valid email address</p>
+        </div>
+      </div>
+      <div class="fourth">
+        <label>Phone Number *</label>
+        <br>
+        <input type="text" [formControl]="phone">
+        <div *ngIf="!phone.valid">
+          <p class='validation'>Please enter a valid phone number with length 8</p>
+        </div>
+      </div>
+      <div class="fives">
+        <label>Address line *</label>
+        <br>
+        <input type="text" formControlName="street">
+      </div>
+      <div class="sixth">
+        <label>Suit *</label>
+        <br>
+        <input type="text" formControlName="suit">
+      </div>
+      <div class="seventh">
+        <label>City *</label>
+        <br>
+        <input type="text" formControlName="city">
+      </div>
+      <div class="eighth">
+        <label>Zip Code *</label>
+        <br>
+        <input type="text" formControlName="zipcode">
+      </div>
+      <div class="tens">
+        <button [class.error]="!myForm.valid" [disabled]="!myForm.valid" ><p class="btn">Create account</p></button>
+      </div>
+    </form>
+</div>

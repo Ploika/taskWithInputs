@@ -1,0 +1,11 @@
+<div class="todo_main">
+  <div class="todo_header">
+    <div class="add_header"><h2>Add a Todo</h2></div>
+    <div class="cansel_window"><p><img src="/assets/img/cansel.png" alt="cansell" (click)="canselWindow()"></p></div>
+  </div>
+  <form [formGroup]='myFormGroup' (ngSubmit)="savePost()">
+    <textarea name="post"  cols="30" rows="10" [formControl]='textArea'></textarea>
+    <br>
+    <button  [disabled]="!myFormGroup.valid" class="add_todo" [class.error]="!myFormGroup.valid">Save Todo</button>
+  </form>
+</div>

@@ -1,0 +1,12 @@
+.header{
+  height: 80px;
+  border-bottom: 1px solid #E1E1E1;
+  display: flex;
+}
+.header_left{
+  margin-left: 30px;
+  margin-top: 20px;
+}
+.header_right{
+  margin-left: 10px;
+}
