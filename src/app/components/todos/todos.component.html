@@ -9,10 +9,10 @@
     </div>
   </div>
   <div class="container">
-    <app-todo *ngFor="let todo of todos; let i = index" [i]='i' [todo]='todo' (lift)="catchTodo($event)"></app-todo>
+    <app-todo *ngFor="let todo of todos; let i = index" [i]='i' [todo]='todo' [check]='check' (lift)="catchTodo($event)"></app-todo>
   </div>
   <div class="bottom_buttons">
-      <button class="select_products">Select all products</button>
+      <button class="select_products" (click)="selectAllProducts()">Select all products</button>
       <button class="select_products" (click)="deleteAllProducts()">Delete all products</button>
   </div>
   <div class="bottom"><router-outlet></router-outlet></div>

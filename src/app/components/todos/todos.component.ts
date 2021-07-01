@@ -11,6 +11,7 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class TodosComponent implements OnInit {
   todos: IProduct[];
+  check: boolean = false;
 
   constructor(private activatedRoute: ActivatedRoute, private router: Router, private dataTransfer: DataService) {
     this.activatedRoute.params.subscribe(params => {
@@ -38,5 +39,8 @@ export class TodosComponent implements OnInit {
   }
   deleteAllProducts(): void {
     this.todos.splice(0, this.todos.length);
+  }
+  selectAllProducts(): void {
+    this.check = true;
   }
 }

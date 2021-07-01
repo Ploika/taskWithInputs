@@ -1,5 +1,5 @@
 <div *ngIf="todo" class="todo">
-  <div class="square"><img src="/assets/img/rectangle.png" alt="rectangle"></div>
+  <div class="square"><input type="checkbox" name="check" [checked]="check"></div>
   <div class='todo_title'>
     <p><span [class.active]="validation"> Name: {{todo.product}} <span class="count">Count: {{todo.count}}</span></span></p>
   </div>
