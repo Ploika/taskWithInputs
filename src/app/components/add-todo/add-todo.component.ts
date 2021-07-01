@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { IProduct } from 'src/app/models/product';
 import { ITodo } from 'src/app/models/todo';
 import { DataService } from 'src/app/services/data.service';
 import { TodoService } from 'src/app/services/todo.service';
@@ -11,10 +12,12 @@ import { TodoService } from 'src/app/services/todo.service';
   styleUrls: ['./add-todo.component.css']
 })
 export class AddTodoComponent implements OnInit {
-  todo: ITodo;
-  textArea = new FormControl('', [Validators.required])
+  todo: IProduct;
+  product = new FormControl('', [Validators.required])
+  count = new FormControl('', [Validators.required])
   myFormGroup = new FormGroup({
-    title: this.textArea
+    product: this.product,
+    count: this.count
   })
 
   constructor(private activatedRoute: ActivatedRoute, private router: Router, private todoService: TodoService, private dataTransfer: DataService) { }
@@ -24,19 +27,14 @@ export class AddTodoComponent implements OnInit {
   }
   savePost(): void {
     this.activatedRoute.params.subscribe(params => {
-      this.todo ={
-        userId: 0,
-        title: this.myFormGroup.controls.title.value,
-        completed: 'false'
-      }
-      this.todoService.save(this.myFormGroup.value, 11).subscribe(params => {})
-      this.dataTransfer.store.subscribe(value => value.unshift(this.todo))
 
-      this.router.navigate(['todos/:id'])
+      this.dataTransfer.store.subscribe(value => value.unshift(this.myFormGroup.value))
+
+      this.router.navigate(['todos'])
     })
   }
   canselWindow(): void {
-    this.router.navigate(['todos/:id'])
+    this.router.navigate(['todos'])
   }
 
 }

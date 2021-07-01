@@ -13,7 +13,7 @@
 }
 
 .add_todo{
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: 40px;
   color: white;
   width: 400px;
@@ -22,16 +22,17 @@
   box-shadow: 0px 4px 14px rgba(44, 203, 139, 0.3);
   border-radius: 6px;
 }
-
-textarea{
-  margin-top: 40px;
-  display: inline-block;
-  width: 400px;
-  height: 64px;
-  resize: auto;
-  border: 1px solid #D9D9D9;
-box-sizing: border-box;
-border-radius: 6px;
+.grocery_input{
+  width: 300px;
+  height: 35px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+.grocery_input_second{
+  width: 300px;
+  height: 35px;
+  margin-bottom: 10px;
+  margin-left: 50px;
 }
 .error{
   background: grey
@@ -40,7 +41,7 @@ border-radius: 6px;
   display: flex;
 }
 .add_header{
-  margin-left: 230px;
+  margin-left: 200px;
 }
 .cansel_window{
   margin-left: 180px;

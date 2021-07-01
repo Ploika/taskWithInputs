@@ -1,11 +1,15 @@
 <div class="todo_main">
   <div class="todo_header">
-    <div class="add_header"><h2>Add a Todo</h2></div>
+    <div class="add_header"><h2>Add a Product</h2></div>
     <div class="cansel_window"><p><img src="/assets/img/cansel.png" alt="cansell" (click)="canselWindow()"></p></div>
   </div>
   <form [formGroup]='myFormGroup' (ngSubmit)="savePost()">
-    <textarea name="post"  cols="30" rows="10" [formControl]='textArea'></textarea>
+    <label> Enter a product</label>
+    <input type="text" class="grocery_input" [formControl]="product">
     <br>
-    <button  [disabled]="!myFormGroup.valid" class="add_todo" [class.error]="!myFormGroup.valid">Save Todo</button>
+    <label> Enter count</label>
+    <input type="number" class="grocery_input_second" [formControl]="count">
+    <br>
+    <button  [disabled]="!myFormGroup.valid" class="add_todo" [class.error]="!myFormGroup.valid">Add product</button>
   </form>
 </div>

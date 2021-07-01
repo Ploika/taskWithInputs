@@ -1,15 +1,22 @@
 <div class="wrapper">
   <div class="title">
     <div class="left_title">
-      <h2>All ToDo's</h2>
+      <h2>All Products</h2>
+      <p>You should buy {{todos.length}} products</p>
     </div>
     <div class="right_title">
-      <button (click)="addTodo()"><span class="button_text">Add A ToDo</span> <span class="vector"><img src="/assets/img/vector.png" alt="img"></span> </button>
+      <button (click)="addTodo()"><span class="button_text">Add A Product</span></button>
     </div>
   </div>
   <div class="container">
-    <app-todo *ngFor="let todo of todos" [todo]='todo' (lift)="catchTodo($event)"></app-todo>
+    <app-todo *ngFor="let todo of todos; let i = index" [i]='i' [todo]='todo' (lift)="catchTodo($event)"></app-todo>
   </div>
+  <div class="bottom_buttons">
+      <button class="select_products">Select all products</button>
+      <button class="select_products" (click)="deleteAllProducts()">Delete all products</button>
+  </div>
+  <div class="bottom"><router-outlet></router-outlet></div>
 </div>
-<router-outlet></router-outlet>
+
+
 

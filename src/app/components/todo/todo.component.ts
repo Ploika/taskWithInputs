@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { ITodo } from 'src/app/models/todo';
-import { TodoService } from 'src/app/services/todo.service';
+import { IProduct } from 'src/app/models/product';
+
 
 @Component({
   selector: 'app-todo',
@@ -9,27 +8,27 @@ import { TodoService } from 'src/app/services/todo.service';
   styleUrls: ['./todo.component.css']
 })
 export class TodoComponent implements OnInit {
-
   @Input()
-  todo: ITodo
+  todo: IProduct
+  @Input()
+  i: number
   validation: Boolean = false
 
   @Output()
   lift = new EventEmitter()
 
-  constructor(private activatedRoute: ActivatedRoute, private todoService: TodoService) { }
+  constructor() { }
 
-  ngOnInit(): void {
-  }
-  editPost(): void {
-    this.todoService.update(this.todo, 201).subscribe(value => {})
+  ngOnInit(): void {}
+  
+  buyProduct(): void {
+    this.validation = true;
+    this.todo.bought = true;
   }
   remove(): void {
-    let conf = confirm('Are you sure delete this post?')
+    let conf = confirm('Are you sure delete this product?')
     if(conf){
-      this.todoService.delete(201)
-      this.validation = true
-      this.lift.emit(this.validation)
+      this.lift.emit(this.i)
     } else {
       return
     }

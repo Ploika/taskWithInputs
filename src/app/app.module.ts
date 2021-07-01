@@ -11,12 +11,13 @@ import { TodosComponent } from './components/todos/todos.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { AddTodoComponent } from './components/add-todo/add-todo.component';
 
+
   let routes: Routes = [
     {path: '', component: HomeComponent,
       children: [
         {path: '', redirectTo: 'userRegister', pathMatch: 'full'},
         {path: 'userRegister', component: UserRegisterComponent},
-        {path: 'todos/:id', component: TodosComponent, children: [
+        {path: 'todos', component: TodosComponent, children: [
           {path: 'addTodo', component: AddTodoComponent}
         ]}
 
@@ -31,7 +32,7 @@ import { AddTodoComponent } from './components/add-todo/add-todo.component';
     HeaderComponent,
     TodosComponent,
     TodoComponent,
-    AddTodoComponent
+    AddTodoComponent,
   ],
   imports: [
     BrowserModule,

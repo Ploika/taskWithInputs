@@ -34,3 +34,29 @@
   margin-left: 20px;
 
 }
+
+.todo_title span {
+  position: relative;
+}
+.todo_title span::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+    width: 0;
+    background: red;
+    top: 8px;
+    left: -5px;
+    transition: width 1.5s;
+}
+.todo_title span.active::before {
+  width: 105%;
+}
+.buy_one{
+  color: white;
+  background: linear-gradient(270deg, #1EA39B 0%, #38EF7D 100%);
+  box-shadow: 0px 4px 14px rgba(44, 203, 139, 0.3);
+  border-radius: 6px;
+}
+.count{
+  margin-left: 100px;
+}

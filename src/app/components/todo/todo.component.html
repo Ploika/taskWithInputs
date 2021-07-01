@@ -1,8 +1,8 @@
 <div *ngIf="todo" class="todo">
   <div class="square"><img src="/assets/img/rectangle.png" alt="rectangle"></div>
   <div class='todo_title'>
-    <p>{{todo.title}}</p>
+    <p><span [class.active]="validation"> Name: {{todo.product}} <span class="count">Count: {{todo.count}}</span></span></p>
   </div>
-  <div class="edit"><img src="/assets/img/edit.png" alt="etid" (click)='editPost()'></div>
+  <div class="edit"><button class="buy_one" (click)="buyProduct()">Buy</button></div>
   <div class='remove'><img src="/assets/img/remove.png" alt="remove" (click)='remove()'></div>
 </div>

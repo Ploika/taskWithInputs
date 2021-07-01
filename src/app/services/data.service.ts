@@ -1,13 +1,13 @@
 
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { ITodo } from '../models/todo';
+import { IProduct } from '../models/product';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-  store = new BehaviorSubject<ITodo[]>([])
+  store = new BehaviorSubject<IProduct[]>([])
   constructor() { }
 
 }

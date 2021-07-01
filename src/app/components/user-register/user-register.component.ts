@@ -24,19 +24,13 @@ export class UserRegisterComponent implements OnInit {
     city: new FormControl(''),
     zipcode: new FormControl('')
   })
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(private router: Router) { }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
   save(): void {
-    this.userService.save(this.myForm.getRawValue()).subscribe( (value)=> {
-    this.router.navigate(['todos', value.id])
-    })
-
+    this.router.navigate(['todos'])
   }
-
 
 }
 

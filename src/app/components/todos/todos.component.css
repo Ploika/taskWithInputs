@@ -30,3 +30,20 @@
 .vector{
   margin-left: 20px;
 }
+.bottom{
+  position: absolute;
+  top: 200px;
+  left: -300px;
+}
+.select_products{
+  margin-top: 20px;
+  margin-bottom: 40px;
+  margin-right: 50px;
+  margin-left: 50px;
+  color: white;
+  width: 300px;
+  height: 40px;
+  background: linear-gradient(270deg, #1EA39B 0%, #38EF7D 100%);
+  box-shadow: 0px 4px 14px rgba(44, 203, 139, 0.3);
+  border-radius: 6px;
+}
