@@ -20,7 +20,7 @@ export class TodoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {}
-  
+
   buyProduct(): void {
     this.validation = true;
     this.todo.bought = true;

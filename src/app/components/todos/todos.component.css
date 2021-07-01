@@ -26,7 +26,23 @@
   height: 32px;
   color: white;
   margin-top: 20px;
+  position: relative;
+  overflow: hidden;
 }
+.right_title > button::before{
+  content: '';
+  display: block;
+  width: 50px;
+  height:100%;
+  position: absolute;
+  background-color: #fff;
+  transform: skewX(-20deg);
+  top: 0;
+  filter: blur(15px);
+  left: -200px;
+  animation: xxx 3000ms ease-in-out infinite;
+}
+
 .vector{
   margin-left: 20px;
 }
@@ -46,4 +62,27 @@
   background: linear-gradient(270deg, #1EA39B 0%, #38EF7D 100%);
   box-shadow: 0px 4px 14px rgba(44, 203, 139, 0.3);
   border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+.select_products::before{
+  content: '';
+  display: block;
+  width: 50px;
+  height:100%;
+  position: absolute;
+  background-color: #fff;
+  transform: skewX(-20deg);
+  top: 0;
+  filter: blur(15px);
+  left: -200px;
+  animation: xxx 3000ms ease-in-out infinite;
+}
+@keyframes xxx {
+  0% {
+    left: -200px;
+  }
+  100% {
+    left: 150%;
+  }
 }

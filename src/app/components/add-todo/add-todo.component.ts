@@ -2,9 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IProduct } from 'src/app/models/product';
-import { ITodo } from 'src/app/models/todo';
 import { DataService } from 'src/app/services/data.service';
-import { TodoService } from 'src/app/services/todo.service';
 
 @Component({
   selector: 'app-add-todo',
@@ -20,7 +18,7 @@ export class AddTodoComponent implements OnInit {
     count: this.count
   })
 
-  constructor(private activatedRoute: ActivatedRoute, private router: Router, private todoService: TodoService, private dataTransfer: DataService) { }
+  constructor(private activatedRoute: ActivatedRoute, private router: Router, private dataTransfer: DataService) { }
 
   ngOnInit(): void {
 

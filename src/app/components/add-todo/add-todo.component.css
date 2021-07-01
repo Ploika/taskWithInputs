@@ -21,6 +21,29 @@
   background: linear-gradient(270deg, #1EA39B 0%, #38EF7D 100%);
   box-shadow: 0px 4px 14px rgba(44, 203, 139, 0.3);
   border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+.add_todo::before{
+  content: '';
+  display: block;
+  width: 50px;
+  height:100%;
+  position: absolute;
+  background-color: #fff;
+  transform: skewX(-20deg);
+  top: 0;
+  filter: blur(15px);
+  left: -200px;
+  animation: anim 3000ms ease-in-out infinite;
+}
+@keyframes anim {
+  0% {
+    left: -200px;
+  }
+  100% {
+    left: 150%;
+  }
 }
 .grocery_input{
   width: 300px;

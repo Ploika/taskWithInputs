@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { IUser } from 'src/app/models/user';
-import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-user-register',
@@ -31,7 +30,6 @@ export class UserRegisterComponent implements OnInit {
   save(): void {
     this.router.navigate(['todos'])
   }
-
 }
 
 
