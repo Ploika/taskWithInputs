@@ -11,7 +11,7 @@ import { IUser } from 'src/app/models/user';
 export class UserRegisterComponent implements OnInit {
   users: IUser[];
   email = new FormControl('', [Validators.email, Validators.required]);
-  phone = new FormControl('', [Validators.required, Validators.minLength(8)]);
+  phone = new FormControl('', [Validators.required, Validators.minLength(12)]);
 
   myForm = new FormGroup({
     name: new FormControl(''),

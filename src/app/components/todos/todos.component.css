@@ -9,6 +9,7 @@
 .title{
   display: flex;
   margin-bottom: 15px;
+  flex-wrap: wrap;
 }
 .left_title{
   flex-grow: 1;
@@ -17,6 +18,17 @@
 
   text-align: right;
   flex-grow: 3;
+}
+.filter{
+  width: 100%;
+}
+.filter > input {
+  height: 40px;
+  width: 60%;
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9;
+  box-sizing: border-box;
+  border-radius: 6px;
 }
 .right_title > button {
   background: linear-gradient(90deg, #38EE7E 0%, #1FA49B 100%);

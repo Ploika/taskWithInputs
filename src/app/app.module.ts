@@ -3,13 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { UserRegisterComponent } from './components/user-register/user-register.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { TodosComponent } from './components/todos/todos.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { AddTodoComponent } from './components/add-todo/add-todo.component';
+import { TodosFilterPipe } from './services/todos-filter.pipe';
 
 
   let routes: Routes = [
@@ -33,10 +34,12 @@ import { AddTodoComponent } from './components/add-todo/add-todo.component';
     TodosComponent,
     TodoComponent,
     AddTodoComponent,
+    TodosFilterPipe
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(routes)
   ],

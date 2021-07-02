@@ -20,12 +20,14 @@ export class AddTodoComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute, private router: Router, private dataTransfer: DataService) { }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
   savePost(): void {
     this.activatedRoute.params.subscribe(params => {
-
+      this.todo = {
+        product: this.myFormGroup.controls.product.value,
+        count: this.myFormGroup.controls.count.value,
+        bought: false,
+      }
       this.dataTransfer.store.subscribe(value => value.unshift(this.myFormGroup.value))
 
       this.router.navigate(['todos'])

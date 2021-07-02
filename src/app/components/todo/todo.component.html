@@ -1,7 +1,7 @@
 <div *ngIf="todo" class="todo">
   <div class="square"><input type="checkbox" name="check" [checked]="check"></div>
   <div class='todo_title'>
-    <p><span [class.active]="validation"> Name: {{todo.product}} <span class="count">Count: {{todo.count}}</span></span></p>
+    <p><span [class.active]="todo.bought"> Name: {{todo.product}} <span class="count">Count: {{todo.count}}</span></span></p>
   </div>
   <div class="edit"><button class="buy_one" (click)="buyProduct()">Buy</button></div>
   <div class='remove'><img src="/assets/img/remove.png" alt="remove" (click)='remove()'></div>

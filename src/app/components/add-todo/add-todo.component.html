@@ -10,6 +10,6 @@
     <label> Enter count</label>
     <input type="number" class="grocery_input_second" [formControl]="count">
     <br>
-    <button  [disabled]="!myFormGroup.valid" class="add_todo" [class.error]="!myFormGroup.valid">Add product</button>
+    <button  [disabled]="!myFormGroup.valid" class="add_todo" (keydown.enter)="savePost()" [class.error]="!myFormGroup.valid">Add product</button>
   </form>
 </div>

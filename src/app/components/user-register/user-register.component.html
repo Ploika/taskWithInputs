@@ -23,9 +23,9 @@
       <div class="fourth">
         <label>Phone Number *</label>
         <br>
-        <input type="text" [formControl]="phone">
+        <input type="text" placeholder="+80957194458" [formControl]="phone">
         <div *ngIf="!phone.valid">
-          <p class='validation'>Please enter a valid phone number with length 8</p>
+          <p class='validation'>Please enter a valid phone number with length 12</p>
         </div>
       </div>
       <div class="fives">

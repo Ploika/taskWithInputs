@@ -7,9 +7,12 @@
     <div class="right_title">
       <button (click)="addTodo()"><span class="button_text">Add A Product</span></button>
     </div>
+    <div class="filter">
+      <input type="text" placeholder="Filter prosucts by name..." [(ngModel)]="searchString">
+    </div>
   </div>
-  <div class="container">
-    <app-todo *ngFor="let todo of todos; let i = index" [i]='i' [todo]='todo' [check]='check' (lift)="catchTodo($event)"></app-todo>
+  <div class="container" *ngIf="todos.length; else noTodos">
+    <app-todo *ngFor="let todo of todos | todosFilter:searchString; let i = index" [i]='i' [todo]='todo' [check]='check' (lift)="catchTodo($event)"></app-todo>
   </div>
   <div class="bottom_buttons">
       <button class="select_products" (click)="selectAllProducts()">Select all products</button>
@@ -17,6 +20,8 @@
   </div>
   <div class="bottom"><router-outlet></router-outlet></div>
 </div>
-
+<ng-template #noTodos>
+  <p style="text-align: center;">No products now</p>
+</ng-template>
 
 

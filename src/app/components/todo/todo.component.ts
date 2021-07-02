@@ -19,10 +19,8 @@ export class TodoComponent implements OnInit {
   @Input()
   check: boolean;
 
-
-
   @Output()
-  lift = new EventEmitter()
+  lift = new EventEmitter<number>()
 
   checkIsTrue: boolean;
   checkbox = new FormControl('')
@@ -37,11 +35,10 @@ export class TodoComponent implements OnInit {
   }
 
   buyProduct(): void {
-    this.validation = true;
     this.todo.bought = true;
   }
   remove(): void {
-    let conf = confirm('Are you sure delete this product?')
+    let conf = confirm('Are you sure remove this product?')
     if(conf){
       this.lift.emit(this.i)
     } else {

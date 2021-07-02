@@ -12,6 +12,7 @@ import { DataService } from 'src/app/services/data.service';
 export class TodosComponent implements OnInit {
   todos: IProduct[];
   check: boolean = false;
+  searchString: string = '';
 
   constructor(private activatedRoute: ActivatedRoute, private router: Router, private dataTransfer: DataService) {
     this.activatedRoute.params.subscribe(params => {
@@ -21,7 +22,8 @@ export class TodosComponent implements OnInit {
     })
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
   addTodo(): void{
     this.activatedRoute.params.subscribe(params => {
@@ -42,5 +44,9 @@ export class TodosComponent implements OnInit {
   }
   selectAllProducts(): void {
     this.check = true;
+  }
+  reducingLength(value: boolean): void {
+    if(value)
+    this.todos.length -= 1;
   }
 }

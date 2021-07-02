@@ -69,3 +69,9 @@
 .cansel_window{
   margin-left: 180px;
 }
+input{
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
